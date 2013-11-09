@@ -76,6 +76,7 @@ void ArrayQueue<T>::grow(){
 		b[k] = backingArray[(front+k) % backingArraySize];
 		}
 
+	delete[] backingArray;
 	backingArray = b;
 	backingArraySize = backingArraySize*2;
 
